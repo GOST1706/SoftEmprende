@@ -1,4 +1,4 @@
-# SoftEmprende *(An Aplication For Entrepreneurs)*
+# SoftEmprende *(Una Aplicación PAra Emprendedores)*
 
 <p align="center">
   <img src="/app/ui/images/SoftEmprende.png" width="450">
