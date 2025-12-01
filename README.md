@@ -1,7 +1,7 @@
 # SoftEmprende *(An Aplication For Entrepreneurs)*
 
 <p align="center">
-  <img src="/app/ui/images/SoftEmprende.png" width="200">
+  <img src="/app/ui/images/SoftEmprende.png" width="450">
 </p>
 
 Sistema de gestión para pequeños y medianos emprendimientos: ventas, inventario, compras, gastos, clientes, proveedores y reportes.
