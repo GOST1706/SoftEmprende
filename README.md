@@ -65,5 +65,5 @@ Se están diseñando pantallas, flujos y estructura interna del sistema.
 ---
 
 ## 👤 Autor
-Desarrollado por **Jaiver**, estudiante de Ingeniería Electrónica.  
+Desarrollado por **Jaiver Buitrago**, estudiante de Ingeniería Electrónica.  
 Proyecto orientado a aprendizaje y aplicación real en negocios.
