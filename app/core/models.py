@@ -5,11 +5,11 @@ from typing import Optional
 # Producto
 @dataclass
 class Product:
-    id: Optional[int]
     sku: str
     name: str
     price: float
     stock: int
+    id: Optional[int] = None
 
 
 # Ítem de ventas

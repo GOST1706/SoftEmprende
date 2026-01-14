@@ -1,4 +1,5 @@
-from core.models import Product
+from app.core.models import Product
+from app.core.sqlite_repo import SQLiteProductRepository
 
 class ProductService:
     def __init__(self, repo):
@@ -6,6 +7,7 @@ class ProductService:
 
     def create(self, sku: str, name: str, price: float, stock: int = 0):
         product = Product(
+            id = None,
             sku=sku,
             name=name,
             price=price,
@@ -25,7 +27,7 @@ class ProductService:
 
     # Actualiza todos los campos del producto
     def update(self, product_id: int, sku: str, name: str, price: float, stock: int):
-        product = self.repo.get_by_id(product_id)
+        product = self.repo.get_by_any(str(product_id))
         if not product:
             raise ValueError("Product not found")
 
@@ -38,3 +40,20 @@ class ProductService:
 
     def delete(self, product_id: int):
         return self.repo.delete(product_id)
+
+
+#'''    
+if __name__ == "__main__":
+    repo = SQLiteProductRepository("products.db")
+    service = ProductService(repo)
+
+    # Crear producto de prueba
+    p = service.create("SKU121", "Producto de prueba 4", 12.5, 10)
+    print("Creado:", p)
+
+    # Listar
+    print("Lista:", service.get_all())
+
+    # Buscar
+    print("Buscar SKU:", service.get("Producto"))
+#'''

@@ -1,5 +1,5 @@
 import sqlite3
-from core.models import Product
+from app.core.models import Product
 
 class SQLiteProductRepository:
     def __init__(self, db_path: str):
