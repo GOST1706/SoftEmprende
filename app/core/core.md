@@ -1,4 +1,4 @@
-# Core del proyecto SoftEmprende
+# Core SoftEmprende
 
 Este documento describe **la arquitectura y responsabilidades del núcleo (core)** del sistema.
 
