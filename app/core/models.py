@@ -12,19 +12,19 @@ class Product:
     id: Optional[int] = None
 
 
-# Ítem de ventas
+# Ítem de venta
 @dataclass
 class SaleItem:
-    id: Optional[int]
     sale_id: int
     product_id: int
     quantity: int
     unit_price: float
+    id: Optional[int] = None
 
 
 # Venta
 @dataclass
 class Sale:
-    id: Optional[int]
     date: datetime
     total: float
+    id: Optional[int] = None

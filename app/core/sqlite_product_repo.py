@@ -1,11 +1,27 @@
 import sqlite3
+import sys
+from pathlib import Path
 from app.core.models import Product
 
 class SQLiteProductRepository:
-    def __init__(self, db_path: str):
+    def __init__(self, db_name: str = "products.db"):
+
+        # Si está compilado (PyInstaller)
+        if getattr(sys, "frozen", False):
+            base_dir = Path(sys.executable).parent
+        else:
+            # En desarrollo
+            base_dir = Path(__file__).resolve().parents[1]
+
+        data_dir = base_dir / "data"
+        data_dir.mkdir(exist_ok=True)
+
+        db_path = data_dir / db_name
+
         self.conn = sqlite3.connect(db_path)
         self.conn.row_factory = sqlite3.Row
         self._create_table()
+
 
     def _create_table(self):
         self.conn.execute("""
