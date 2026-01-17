@@ -9,8 +9,14 @@ class Product:
     name: str
     price: float
     stock: int
+    category_id: Optional[int] = None
     id: Optional[int] = None
 
+# Categoría
+@dataclass
+class Category:
+    name: str
+    id: Optional[int] = None
 
 # Ítem de venta
 @dataclass
